@@ -6,8 +6,6 @@ notifications:
 os:
   - osx
 
-services:
-  - mysql
-
 before_script:
+  - brew update-reset
   - if [[ "$TRAVIS_OS_NAME" == osx   ]]; then brew install mysql@5.7    ; fi
